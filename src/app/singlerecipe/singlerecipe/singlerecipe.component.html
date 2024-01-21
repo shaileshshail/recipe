@@ -1,0 +1,11 @@
+<div class="container">
+  <img src="{{item.strMealThumb}}"/>
+  <p>{{item.idMeal}}</p>
+  <p>{{item.strMeal}}</p>
+  <p>{{item.strArea}}</p>
+  <p>{{item.strCategory}}</p>
+  <h2>Instructions :</h2>
+  <ul *ngFor="let ins of item?.strInstructions?.split('.');index as ind">
+    <p>{{ind+1}}:  {{ins}}</p>
+  </ul>
+</div>

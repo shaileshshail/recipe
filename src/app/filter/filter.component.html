@@ -1,0 +1,17 @@
+<div class="container">
+  <form class="d-inline" [formGroup]="form" (ngSubmit)="$event.preventDefault();filter()">
+    <label>Category</label>
+    <select class="form-select" formControlName="category">
+      <option *ngFor="let i of categoryList" value="{{i}}">{{i}}</option>
+    </select>
+    <div
+      *ngIf="form.get('category')?.invalid && (form.get('category')?.dirty || form.get('category')?.touched)">
+      <small class="text-danger" *ngIf="form.get('category')?.hasError('formValidator')">
+        This field is required.
+      </small>
+    </div>
+    <button type="submit"
+    class="btn btn-primary"
+    [disabled]="form.invalid">Filter</button>
+  </form>
+</div>

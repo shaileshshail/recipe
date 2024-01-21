@@ -1,0 +1,16 @@
+<div class="card m-10 p-1" style="width: 18rem;" (click)="navigate()">
+  <img src="{{item?.strMealThumb}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{item?.strMeal}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{item?.strCategory}}</li>
+    <li class="list-group-item">{{item?.strArea}}</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="{{item?.strSource}}" target="_blank" class="card-link">Source link</a>
+    <a href="{{item?.strYoutube}}" target="_blank" class="card-link">Youtube link</a>
+  </div>
+</div>
